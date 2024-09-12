@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trabajosilustrativos</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            background-color: #fff;
+            display: flex;
+            justify-content: flex-start; /* Comienza desde la parte superior */
+            align-items: center;
+            flex-direction: column; /* Alinear verticalmente el contenido */
+            min-height: 100vh; /* Ajusta la altura mínima al 100% de la ventana */
+        }
+      
+        header h1 {
+            margin-top: 90px;
+            margin-bottom: 40px;
+            font-size: 34px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #000000;
+            text-align: center; /* Centrar el texto */
+        }
+        h2 , h3, h4 ,h5 {
+            margin-top: 100px;
+            margin-bottom: 120px;
+            font-size: 28px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            color: #000000;
+            text-align: center; /* Centrar el texto */
+        }  
+        
+        .gallery {
+            display: flex;
+            flex-direction: row; /* Disposición horizontal de las imágenes */
+            align-items: center;
+            justify-content: center; /* Centra las imágenes horizontalmente */
+            gap: 105px; /* Espacio entre las imágenes */
+            text-align: center; /* Centrar textos dentro de la galería */
+            flex-wrap: wrap; /* Permitir que las imágenes se envuelvan en filas nuevas */
+            padding-bottom: 300px; /* Añade espacio al final de cada galería */
+        }
+    
+        .gallery img {
+            max-width: 35%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease, max-width 0.3s ease;
+        }
+    
+        /* Estilo para imagen agrandada */
+        .gallery img.enlarged {
+            max-width: 100%; /* Tamaño grande al hacer clic */
+            position: absolute; /* Posición absoluta para centrarla en su contenedor */
+    
+        }
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 32px 8px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    text-align: right;
+}
+
+.sidenav a:hover {
+    color: #ffffff;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    margin-right: 50px;
+}
+
+.openbtn {
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.openbtn:hover {
+    background-color: #ffffff;
+}
+    </style>
+</head>
+<body> <!-- Menú Lateral -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="videoarte.html">videoarte</a>
+        <a href="Graficadigital.html" >Graficadigital</a>
+        <a href="https://example.com/pagina3">Página 3</a>
+    </div>
+
+ 
+    <header>
+        <h1>Intervención de imagen</h1>
+    </header>
+    
+    <h2>Entre blancos - 2024</h2>
+    <div class="gallery">
+        <img src="blancos1.PNG" alt="Imagen 1">
+        <img src="blancos2.PNG" alt="Imagen 2">
+    </div>
+       
+    <h3>Entre las olas - 2024</h3>
+    <div class="gallery">
+        <img src="olas.PNG" alt="Imagen 3">
+        <img src="olas1.PNG" alt="Imagen 4">
+    </div>
+    
+    <h3>Útero - 2024</h3>
+    <div class="gallery">
+        <img src="ÚterO.GIF" alt="Imagen 5">
+    </div>
+
+    <h4>Mis espacios en L-2024</h4>
+    <div class="gallery">
+        <img src="lerma1.PNG" alt="Imagen 6">
+        <img src="lerma2.JPG" alt="Imagen 7">
+        <img src="lerma3.PNG" alt="Imagen 8">
+        <img src="lerma1.PNG" alt="Imagen 9">
+    </div>
+    <h3>Mi pensar- 2024</h3>
+    <div class="gallery">
+        <img src="ojos.PNG" alt="Imagen 10">
+    </div>
+
+    <h4>ACTOS DE AMOR PARTE DE PAU-2023</h4>
+    <div class="gallery">
+        <img src="pau1.JPG" alt="Imagen 11">
+        <img src="pau2.JPG" alt="Imagen 12">
+        <img src="pau3.JPG" alt="Imagen 13">
+        <img src="pau4.JPG" alt="Imagen 14">
+    </div>
+
+    <script>
+
+  // Script para cambiar el tamaño de la imagen al hacer clic
+  var images = document.querySelectorAll('.gallery img');
+    
+    images.forEach(function(img) {
+        img.onclick = function() {
+            this.classList.toggle('enlarged');
+        }
+    });
+
+
+
+
+
+       function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+// Cerrar el menú si se hace clic fuera de él
+document.addEventListener('click', function(event) {
+    var sidenav = document.getElementById("mySidenav");
+    var openButton = document.querySelector('.openbtn');
+    
+    // Comprobar si el clic está fuera del menú y fuera del botón de apertura
+    if (sidenav.style.width === "250px" && !sidenav.contains(event.target) && !openButton.contains(event.target)) {
+        closeNav();
+    }
+});
+
+// Evitar que el clic en el botón de apertura cierre el menú inmediatamente
+document.querySelector('.openbtn').addEventListener('click', function(event) {
+    event.stopPropagation(); // Esto evita que el evento de clic en el botón sea propagado y cierre el menú
+    openNav();
+});
+       
+       
+       
+     
+    </script>
+</body>
+</html>
+
