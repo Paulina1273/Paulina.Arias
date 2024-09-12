@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -19,6 +23,15 @@ header h1 {
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
     color: #000000; /* Color del texto */
+}
+header h2 {
+    position: relative;
+    top: 10px;  /* Mueve el texto hacia abajo */
+    left: 20px; /* Mueve el texto hacia la derecha */
+    font-size: 20px; /* Ajusta el tamaño del texto si es necesario */
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: #282828; /* Color del texto */
 }
 
 main {
@@ -46,13 +59,13 @@ main {
 
 .vertical-text {
     position: absolute;
-    top: 1000px;
+    top: 1120px;
     left: 140px; /* Ajusta la posición horizontal del texto vertical */
     writing-mode: vertical-lr;
     text-orientation: mixed;
     font-size: 48px;
     font-weight: bold;
-    color: #000000;
+    color: #6c1a89;
     letter-spacing: 50px;
 }
 
