@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos de Instagram</title>
+    <style>
+        /* Asegura que el fondo cubra toda la pantalla */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: url('gif6.GIF') no-repeat center center fixed;
+
+            background-size: cover;
+        }
+
+        /* Estilo para los enlaces */
+        .contact {
+            text-align: center;
+           
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: rgb(0, 0, 0);
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
+
+        .contact a {
+            display: block;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 24px;
+            margin: 10px 0;
+            padding: 10px;
+           
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .contact a:hover {
+            background-color: rgba(99, 28, 166, 0.498);
+            color: rgba(147, 48, 253, 0.536);
+        }
+
+        .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 32px 8px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    text-align: right;
+}
+
+.sidenav a:hover {
+    color: #ffffff;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    margin-right: 50px;
+}
+
+.openbtn {
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.openbtn:hover {
+    background-color: #ffffff;
+}
+
+
+    </style>
+</head>
+<body> 
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="videoarte.html">videoarte</a>
+        <a href="Graficadigital.html" >Graficadigital</a>
+        <a href="Grabado.html">Grabado</a>
+        <a href="html/contacto.html">Contacto</a>
+        <a href="../index.html">inicio</a>
+    </div>
+
+    <!-- Botón del Menú -->
+    <span class="openbtn" onclick="openNav()">&#9776;</span>
+
+ 
+
+    <div class="contact">
+        <h1>Contáctame </h1>
+        <!-- Primer perfil de Instagram -->
+        <a href="https://www.instagram.com/paulina1273" target="_blank"> @paulina1273</a>
+        <!-- Segundo perfil de Instagram -->
+        <a href="https://www.instagram.com/pau_videoarte" target="_blank"> @pau_videoarte</a>
+
+        <a href="mailto:pau_lina1234@hotmail.com?subject=Consulta%20de%20contacto&body=Hola,%20me%20gustaría%20ponerme%20en%20contacto%20contigo.">Envíame un correo</a>
+
+
+    </div>
+
+
+    <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+    
+    // Cerrar el menú si se hace clic fuera de él
+    document.addEventListener('click', function(event) {
+        var sidenav = document.getElementById("mySidenav");
+        var openButton = document.querySelector('.openbtn');
+        
+        // Comprobar si el clic está fuera del menú y fuera del botón de apertura
+        if (sidenav.style.width === "250px" && !sidenav.contains(event.target) && !openButton.contains(event.target)) {
+            closeNav();
+        }
+    });
+    
+    // Evitar que el clic en el botón de apertura cierre el menú inmediatamente
+    document.querySelector('.openbtn').addEventListener('click', function(event) {
+        event.stopPropagation(); // Esto evita que el evento de clic en el botón sea propagado y cierre el menú
+        openNav();
+    });
+</script>
+</body>
+</html>

@@ -1,17 +1,15 @@
- 
-       
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graficadigital</title>
+    <title>Grabado</title>
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: 'Times New Roman', Times, serif, sans-serif;
-            background-color: #fff;
+            background-color: #101010;
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -22,42 +20,49 @@
         header h1 {
             margin-top: 90px;
             margin-bottom: 40px;
-            font-size: 34px;
+            font-size: 44px;
             font-weight: bold;
-            color: #000000;
+            color: #ffffff;
             text-align: center;
         }
         h2, h3, h4, h5 {
-            margin-top: 100px;
-            margin-bottom: 120px;
-            font-size: 28px;
+            margin-top: 8%;
+            margin-bottom: 50px;
+            font-size: 38px;
             font-weight: bold;
-            color: #000000;
+            color: #ffffff;
             text-align: center;
             cursor: pointer;
         }
 
-        .gallery {
+        .gallery-container {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 105px;
-            text-align: center;
+            gap: 10px;
+            padding-bottom: 50px;
+        }
+
+        .gallery {
+            display: flex;
             flex-wrap: wrap;
-            padding-bottom: 300px;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            text-align: center;
         }
 
         .gallery img {
-            max-width: 35%;
+            max-width: 45%;
             height: auto;
             cursor: pointer;
             transition: transform 0.3s ease, max-width 0.3s ease;
         }
 
         .gallery img.enlarged {
-            max-width: 100%;
-            position: absolute;
+            max-width: 30%; /* Ajuste del tamaño cuando la imagen se agranda */
+            transform: scale(1.1); /* Ligero zoom */
         }
 
         .sidenav {
@@ -143,12 +148,13 @@
 
         .close-popup {
             cursor: pointer;
-            color: rgb(52, 2, 82);
+            color: rgb(242, 0, 0);
             font-size: 30px;
             position: absolute;
             top: 10px;
             right: -30px; 
         }
+        
     </style>
 </head>
 <body>
@@ -166,58 +172,49 @@
     </div>
 
     <header>
-        <h1>Intervención de imagen</h1>
+        <h1>Grabado</h1>
     </header>
 
-    <h2 onclick="showPopup('Entre blancos-2024 tecnica:ilustración e intervención de imagen ')">Entre blancos - 2024</h2>
-    <div class="gallery">
-        <img src="blancos1.PNG" alt="Imagen 1">
-        <img src="blancos2.PNG" alt="Imagen 2">
+    <!-- Cada galería con su título e imagen dentro del mismo contenedor -->
+    <div class="gallery-container">
+        <h2 onclick="showPopup('Nosotras-2016    Grabado sobre papel')">Nosotras - 2016</h2>
+        <div class="gallery">
+            <img src="grabado1.jpg" alt="Imagen 1">
+        </div>
     </div>
 
-    <h3 onclick="showPopup(' Entre las olas-2024 tecnica:ilustración e intervención de imagen')">Entre las olas - 2024</h3>
-    <div class="gallery">
-        <img src="olas.PNG" alt="Imagen 3">
-        <img src="olas1.PNG" alt="Imagen 4">
+    <div class="gallery-container">
+        <h3 onclick="showPopup('Solo yo-2016 Grabado sobre papel')"> Solo yo - 2016</h3>
+        <div class="gallery">
+            <img src="grabado2.png" alt="Imagen 2">
+        </div>
     </div>
 
-    <h3 onclick="showPopup('Descripción de la imagen de Útero')">Útero - 2024</h3>
-    <div class="gallery">
-        <img src="ÚterO.GIF" alt="Imagen 5">
+    <div class="gallery-container">
+        <h3 onclick="showPopup('Anti especista-2024 Grabado sobre papel')">Anti especista - 2024</h3>
+        <div class="gallery">
+            <img src="grabado3.jpg" alt="Imagen 3">
+        </div>
     </div>
 
-    <h4 onclick="showPopup(' Mis espacios en L-2024 tecnica:ilustración e intervención de imagen')">Mis espacios en L-2024</h4>
-    <div class="gallery">
-        <img src="lerma1.PNG" alt="Imagen 6">
-        <img src="lerma2.JPG" alt="Imagen 7">
-        <img src="lerma3.PNG" alt="Imagen 8">
-        <img src="lerma1.PNG" alt="Imagen 9">
-    </div>
-    
-    <h3 onclick="showPopup('Mi pensar-2024 tecnica:ilustración')">Mi pensar- 2024</h3>
-    <div class="gallery">
-        <img src="ojos.PNG" alt="Imagen 10">
-    </div>
-    
-    <h3 onclick="showPopup(' Me veO-2023 tecnica')">Me veO- 2023</h3>
-    <div class="gallery">
-        <img src="me veO.jpg" alt="Imagen 11">
+    <div class="gallery-container">
+        <h4 onclick="showPopup('$AD BOYZ II-2024 Grabado sobre papel y collage ')">$AD BOYZ II-2024</h4>
+        <div class="gallery">
+            <img src="grabado4.jpg" alt="Imagen 4">
+            <img src="grabado6.JPG" alt="Imagen 5">
+        </div>
     </div>
 
-    <h4 onclick="showPopup(' ACTOS DE AMOR PARTE DE PAU-2023 tecnica: ilustración y collage ')">ACTOS DE AMOR PARTE DE PAU-2023</h4>
-    <div class="gallery">
-        <img src="pau1.JPG" alt="Imagen 11">
-        <img src="pau2.JPG" alt="Imagen 12">
-        <img src="pau3.JPG" alt="Imagen 13">
-        <img src="pau4.JPG" alt="Imagen 14">
+    <div class="gallery-container">
+        <h3 onclick="showPopup('Un pequeño- 2024 Grabado sobre papel y collage ')">Un pequeño - 2024</h3>
+        <div class="gallery">
+            <img src="grabado5.jpg" alt="Imagen 6">
+        </div>
     </div>
 
-    <h4 onclick="showPopup(' A mí tambien-2022 tecnica:ilustración')">A mí tambien 2022</h4>
-    <div class="gallery">
-        <img src="foto7.PNG" alt="Imagen 11">
-        <img src="foto8.PNG" alt="Imagen 12">
-        <img src="foto9.PNG" alt="Imagen 13">
-        <img src="foto10.PNG" alt="Imagen 14">
+   
+
+
     </div>
 
     <!-- Contenedor del Popup -->
